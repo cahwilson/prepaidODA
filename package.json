@@ -1,0 +1,22 @@
+{
+  "name": "prepaidoda",
+  "version": "1.0.0",
+  "description": "The og prepaid app",
+  "main": "app.js",
+  "scripts": {
+    "test": "Standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cahwilson/prepaidODA.git"
+  },
+  "author": "Cahill Wilson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cahwilson/prepaidODA/issues"
+  },
+  "homepage": "https://github.com/cahwilson/prepaidODA#readme",
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
