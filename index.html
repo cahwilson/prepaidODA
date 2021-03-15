@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prepaid On Device Activation</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+     <!-- VueJS -->
+     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="/path/to/vuex.js"></script>
+    <script src="./app.js" defer></script>
+</head>
+
+<!-- Header for app-->
+<body>
+
+    <div class="jumbotron text-center" style="margin-bottom:0">
+      <h1>Preapaid On Device Activation Portal</h1>
+      <!-- <p>Resize this responsive page to see the effect!</p> -->
+
+
+<body>
+  <div id="app" class="container pt-6 pb-6">
+    <form>
+        <section v-if="step == 1">
+            <h3>Step 1: Port Eligibility</h3>
+            <div class="form-control form-control-md">
+                <p>Please enter the 10 digit phone number you would like to port from your current carrier and zip code. </p>
+                    <label for="phone-number">Phone Number</label>
+                    <input v-model="device.phoneNumber" type="tel" placeholder="617-519-4468" id="phone-number" />
+                    <label for="zip-code">Zip Code</label>
+                    <input v-model="account.zipCode" type="text" placeholder="12180" id="zip-code" />
+
+            </div>
+            <div v-if="device.outsideFootprint">
+                <p>The phone number and zip code you have requested is outside of our network coverage footprint. If you would like to proceed with your prepaid activation, select next and a mobile device number will be generated for you.</p>
+            </div>
+
+
+        </section>
+
+        <section v-if="step == 2">
+            <h3>Step 2: Device Validation</h3>
+            <p>Your phone number: {{ device.phoneNumber }}</p>
+            <div class="form-control form-control-md">
+                <h5>Now, let's validate your device.</h5>
+                <p>Please enter the IMEI of the device you'll be activating today. If you don't know where to find this value, click the link below   </p>
+
+                    <div class="input-group mb-3">
+                        <label>IMEI</label>
+                        <input type="text" class="form-control" placeholder="35 300311 4886083 7" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                          <button @click="imeiCheck" class="btn btn-outline-secondary" type="button">Check</button>
+                        </div>
+                      </div>
+            </div>
+            
+        </section>
+
+
+        <section v-if="step == 3">
+            <h3>Step 4: Select Plans</h3>
+            <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">List group item heading</h5>
+                    <small>3 days ago</small>
+                  </div>
+                  <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                  <small>Donec id elit non mi porta.</small>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">List group item heading</h5>
+                    <small class="text-muted">3 days ago</small>
+                  </div>
+                  <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                  <small class="text-muted">Donec id elit non mi porta.</small>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">List group item heading</h5>
+                    <small class="text-muted">3 days ago</small>
+                  </div>
+                  <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                  <small class="text-muted">Donec id elit non mi porta.</small>
+                </a>
+              </div>
+        </section>
+
+        
+        <section v-if="step == 4">
+            <h3>Step 4: Create Account</h3>
+            
+        </section v-if="step == 1">
+
+        <section v-if="step == 5">
+            <h3>Step 5: Payment</h3>
+            
+        </section>
+
+        <section v-if="step == 6">
+            <h3>Step 6: Summary</h3>
+            
+        </section>
+<!-- Next Step Button -->
+        <button 
+            v-if="step != 1"
+            @click.prevent="prevStep">
+         Previous Step</button>
+<!-- Next Step Button -->
+        <button 
+            v-if="step != totalSteps"
+            @click.prevent="nextStep">
+        Next Step</button>
+
+
+    </form>
+  </div>
+
+
+</body>
+</html>

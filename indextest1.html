@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Demo</title>
+    <meta charset="utf-8">
+    <script src="jquery.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/materialize-stepper@3.1.0/dist/css/mstepper.min.css">
+    <script src="https://unpkg.com/materialize-stepper@3.1.0/dist/js/mstepper.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <ul class="stepper horizontal" style="min-height:458px">
+            <li class="step active">
+                <div class="step-title waves-effect">Device Portal</div>
+                <div class="step-content">
+                    <!-- Your step content goes here (like inputs or so) -->
+                    <p>This is some test text</p>
+                    <input>E-mail</input>
+                    <input>Address</iput>
+                    <div class="step-actions">
+                        <!-- Here goes your actions buttons -->
+                        <button class="waves-effect waves-dark btn next-step">CONTINUE</button>
+                    </div>
+                </div>
+            </li>
+            <li class="step active">
+                <div class="step-title waves-effect">Sim Validation</div>
+                <div class="step-content">
+                     <!-- Your step content goes here (like inputs or so) -->
+                     <p>This is some test text</p>
+                     <input>E-mail</input>
+                     <input>Address</iput>
+                     <div class="step-actions">
+                         <!-- Here goes your actions buttons -->
+                         <button class="waves-effect waves-dark btn next-step">CONTINUE</button>
+                    
+                </div>
+
+                </div>
+            </li>
+
+        </ul>
+    </div>
+    <script>
+        var stepper = document.querySelector('.stepper');
+        var stepperInstace = new MStepper(stepper, {
+            // options
+            firstActive: 0 // this is the default
+        })
+    </script>
+</body>
+
+</html>
