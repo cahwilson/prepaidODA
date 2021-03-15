@@ -1,0 +1,32 @@
+{ 
+    "CustomerID": "8753932",
+    "CreationTimestamp": "2018-09-21 12:15:00.233 +1:00",
+    "CustomerAddress": {
+        "Street1": "269 Carrolls Grove Road", 
+        "Street2": "Apt 2G",
+        "City": "Troy", 
+        "State": "New York", 
+        "ZipCode": "12180" 
+    }, 
+    "SecurityQuestions": {
+        "SecurityQuestion1": "What was the name of your favorite teacher?",
+        "SecurityQuestion1Answer": "Tim", 
+        "SecurityQuestion2": "What city were you born in?", 
+        "SecurityQuestion2Answer": "Ogdensburg" 
+    },
+    "AppliedCustomerPlan": "Unlimited Go Plus", 
+    "AppliedPromotion": "Paperless Biling", 
+    "PayementInformation": { 
+        "CreditCardNumber": "4111111111111111", 
+        "ZipCode": "12180", 
+        "CVV": "110", 
+        "ExpiryDate": "11/21" 
+    },
+    "BillingAddress":{ 
+        "Street1": "269 Carrolls Grove Road", 
+        "Street2": "Apt 2G",
+        "City": "Troy", 
+        "State": "New York", 
+        "ZipCode": "12180" 
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "VisitorID": "101448396",
+    "CreationTimestamp": "2018-09-21 12:15:00.233 +1:00", 
+    "AccountType": "Prepaid Standalone", 
+    "Port": {
+        "Request1": {
+            "MDN": "6175194468",
+            "Eligibility": "False"
+        },
+        "Request2": {
+            "MDN": "6275590088",
+            "PortEligibility": "True" 
+          }
+     },
+    "Footprint": {
+        "ZipCode" : "12180", 
+        "FootprintEligibility": "True" 
+     }, 
+    "Device":{
+        "IMEI": "AA-BBBBBB-CCCCCC-D",
+        "MEID": "R3-588220-505628-8",
+        "DeviceEligibility": "False"
+    }, 
+    "SIM": {
+        "IMSI": "310170265624299",
+        "SIMEligibility": "True"
+    }
+}
